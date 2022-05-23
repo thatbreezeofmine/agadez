@@ -14,16 +14,16 @@ export default function Header(props) {
     return (
         <>
             <Head>
-                <title>{(!props ? props.title : "Agadez")}</title>
+                <title>{(!props ? props.title : "Asaru")}</title>
                 <meta name={"og:title"} content={(!props ? props.title : "Agadez")} key={"title"} />
-                <meta name={"og:description"} content={"Agadez.com: Tickets & Billetterie concerts, spectacles, cinéma, festivals, sport et théâtre au Maroc."} />
+                <meta name={"og:description"} content={"Asaru.ma: Tickets & Billetterie concerts, spectacles, cinéma, festivals, sport et théâtre au Maroc."} />
                 {/* todo: add other meta descriptions (Keywords & icons) */}
             </Head>
             { /*
             <div className={"bg-gray-100 flex justify-between px-6 lg:px-0 lg:grid lg:grid-cols-3 items-center"}>
                  <div className={"hidden lg:block place-self-center"}>test</div> */ }
             <div className={"bg-gray-100 flex justify-between px-6 lg:px-0 lg:justify-around items-center"}>
-                <div className={"text-2xl font-bold py-4 text-agadez-800 font-arsenica place-self-start lg:place-self-center select-none"}>Agadez</div>
+                <div className={"text-2xl font-bold py-4 text-agadez-800 font-arsenica place-self-start lg:place-self-center select-none"}>Asaru</div>
                 <div className={"hidden lg:flex items-center gap-x-8 place-self-center"}>
                     <IconButton type={"button"} callback={() => {/* todo: action*/}}>
                         <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>

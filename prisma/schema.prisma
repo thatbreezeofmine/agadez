@@ -32,12 +32,13 @@ model Product {
     ownerId Int?
     product_name String?
     image_url String?
+    image2_url String?
     short_desc String?
     long_desc String?
     date DateTime
     published Boolean @default(false)
     venue String?
-    type Type? @relation(fields: [typeId], references: [id])
+    product_type Type? @relation(fields: [typeId], references: [id])
     typeId Int?
     tickets Ticket[]
     featured Boolean @default(false)

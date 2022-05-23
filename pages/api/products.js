@@ -4,15 +4,15 @@ export default async function handler(req, res) {
 
     const prisma = new PrismaClient()
 
-    const featuredProducts = await prisma.product.findMany({
+    const products = await prisma.product.findMany({
         where : {
-            featured : true,
+            published : true,
             date : {
                 gt: new Date()
             }
         }
     })
 
-    res.status(200).json(featuredProducts)
+    res.status(200).json(products)
 
 }

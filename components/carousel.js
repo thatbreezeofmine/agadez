@@ -1,4 +1,4 @@
-import Card from "./card";
+import Carousel_card from "./carousel_card";
 import {useEffect, useState} from "react";
 
 function getWindowDimensions() {
@@ -75,15 +75,18 @@ export default function Carousel(props) {
     }
 
     const nextSlide = () => {
-        if (offset + 1 == props.items.length) {
+        if (offset + 1 == props.items?.length) {
             setOffset(0)
         } else {
             setOffset(offset + 1)
         }
     }
 
-    if (windowWidth >= 1024 && slidesToShow != 5) {
+    {/* todo : dynamically change the number of slides to show depending on screenwidth, e.g Int(ScreenWidth / 96px) */}
+    if (windowWidth >= 1280 && slidesToShow != 5) {
         setSlidesToShow(5);
+    } else if (windowWidth >= 1024  && windowWidth < 1280 && slidesToShow != 4){
+        setSlidesToShow(4);
     } else if (windowWidth < 1024 && slidesToShow != 3){
         setSlidesToShow(3);
     }
@@ -99,7 +102,7 @@ export default function Carousel(props) {
     return (<div className={"relative pt-3 lg:pt-6 max-w-full"}>
         <div className={"absolute flex z-10 justify-center w-full space-x-2 lg:space-x-3 "}>
         {items.map((item, id) => {
-            return (<Card key={item.id} product={item} />)
+            return (<Carousel_card key={item.id} product={item} />)
         })}
         </div>
         <div className={"absolute z-10 flex items-center justify-between inset-0 px-3 lg:px-6 mt-40 lg:mt-56"}>

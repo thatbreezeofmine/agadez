@@ -8,5 +8,13 @@
 }
 
 .rounded-agadez {
-    @apply rounded-br-2xl rounded-tl-2xl;
+    /*@apply rounded-br-2xl rounded-tl-2xl;*/
+    @apply rounded-2xl;
+}
+
+.transition-carousel {
+    -webkit-transition: background-image 2s ease-out;
+    -moz-transition: background-image 2s ease-out;
+    -o-transition: background-image 2s ease-out;
+    transition: background-image 2s ease-out;
 }
