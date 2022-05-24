@@ -7,9 +7,19 @@
     src : url('arsenica.ttf');
 }
 
+@font-face {
+    font-family: Roboto;
+    src : url('roboto.ttf');
+}
+
+body {
+    font-family: Roboto;
+}
+
 .rounded-agadez {
     /*@apply rounded-br-2xl rounded-tl-2xl;*/
-    @apply rounded-2xl;
+    /* @apply rounded-2xl; */
+    @apply rounded-md;
 }
 
 .transition-carousel {

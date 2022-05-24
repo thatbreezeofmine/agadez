@@ -1,8 +1,6 @@
-import { PrismaClient } from '@prisma/client'
+import prisma from './client'
 
 export default async function handler(req, res) {
-
-    const prisma = new PrismaClient()
 
     const types = await prisma.type.findMany()
 

@@ -12,7 +12,7 @@ export default function Header(props) {
     const types = useSWR('/api/types', fetcher).data
 
     return (
-        <>
+        <div className={"sticky top-0 left-0 right-0 z-50 select-none"}>
             <Head>
                 <title>{(!props ? props.title : "Asaru")}</title>
                 <meta name={"og:title"} content={(!props ? props.title : "Agadez")} key={"title"} />
@@ -22,6 +22,7 @@ export default function Header(props) {
             { /*
             <div className={"bg-gray-100 flex justify-between px-6 lg:px-0 lg:grid lg:grid-cols-3 items-center"}>
                  <div className={"hidden lg:block place-self-center"}>test</div> */ }
+
             <div className={"bg-gray-100 flex justify-between px-6 lg:px-0 lg:justify-around items-center"}>
                 <div className={"text-2xl font-bold py-4 text-agadez-800 font-arsenica place-self-start lg:place-self-center select-none"}>Asaru</div>
                 <div className={"hidden lg:flex items-center gap-x-8 place-self-center"}>
@@ -42,7 +43,7 @@ export default function Header(props) {
                         Panier
                     </Button>
                 </div>
-                <div className={"block lg:hidden text-agadez-800"}>
+                <div className={"block lg:hidden bg-white text-agadez-800"}>
                     <IconButton type={"button"} callback={() => {setShowMenu(!showMenu)}}>
                         {!showMenu ? <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
                             <path strokeLinecap="round" strokeLinejoin="round" d="M4 6h16M4 12h16M4 18h16" />
@@ -54,7 +55,7 @@ export default function Header(props) {
                 </div>
             </div>
 
-            <div className={"hidden lg:flex w-screen justify-center gap-x-8 py-3 font-bold select-none"}>
+            <div className={"hidden lg:flex w-screen justify-center gap-x-8 py-3 font-bold bg-white select-none"}>
                 <span className={`${(props.page == 'Accueil') ? "cursor-default text-agadez-800" : "cursor-pointer"}`} onClick={() => {props.setPage('Accueil')}}>
                     Accueil
                 </span>
@@ -75,6 +76,13 @@ export default function Header(props) {
                     })}
                 </div>
             : null)}
-        </>
+            {/* todo: maybe use this one as an announcement bar
+            <div className={"w-full py-4 bg-agadez-900 text-center text-white font-bold"}>
+                Les tickets de coupe du monde Qatar sont désormais disponibles !
+            </div> */}
+            <div className={"w-full py-1 bg-agadez-900 text-center text-white font-bold"}>
+            Les tickets de coupe du monde Qatar sont désormais disponibles !
+        </div>
+        </div>
     )
 }

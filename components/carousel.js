@@ -106,13 +106,13 @@ export default function Carousel(props) {
         })}
         </div>
         <div className={"absolute z-10 flex items-center justify-between inset-0 px-3 lg:px-6 mt-40 lg:mt-56"}>
-            <div className="group motion-safe:animate-pulse bg-white rounded-3xl py-1 hover:px-1 hover:mt-1 hover:-ml-1" onClick={() => {prevSlide()}}>
-                <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6 group-hover:h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+            <div className="group shadow-sm motion-safe:animate-pulse bg-white rounded-3xl py-1 hover:px-1 hover:mt-1 hover:-ml-1" onClick={() => {prevSlide()}}>
+                <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6 group-hover:h-8 group-hover:w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
                     <path strokeLinecap="round" strokeLinejoin="round" d="M11 17l-5-5m0 0l5-5m-5 5h12" />
                 </svg>
             </div>
-            <div className="motion-safe:animate-pulse bg-white rounded-3xl py-1 hover:px-1 hover:py-2 hover:mt-1 hover:-mr-1" onClick={() => {nextSlide()}}>
-                <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6 group-hover:h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+            <div className="group shadow-sm motion-safe:animate-pulse bg-white rounded-3xl py-1 hover:py-2 hover:mt-1" onClick={() => {nextSlide()}}>
+                <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6 group-hover:h-8 group-hover:w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
                     <path strokeLinecap="round" strokeLinejoin="round" d="M13 7l5 5m0 0l-5 5m5-5H6" />
                 </svg>
             </div>

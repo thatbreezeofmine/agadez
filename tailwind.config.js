@@ -5,19 +5,22 @@ module.exports = {
   ],
   theme: {
     extend: {
+      fontSize : {
+         '2xs' : ".50rem"
+      },
       fontFamily: {
         'arsenica': ['arsenica', 'serif'],
       },
       colors: {
-        'agadez-900' : '#6b287c',
-        'agadez-800' : '#7a3e89',
-        'agadez-700' : '#895396',
-        'agadez-600' : '#9769a3',
-        'agadez-500' : '#a67eb0',
-        'agadez-400' : '#b594be',
-        'agadez-300' : '#c4a9cb',
-        'agadez-200' : '#e1d4e5',
-        'agadez-100' : '#f0eaf2',
+        'agadez-900' : '#4b2a7b',
+        'agadez-800' : '#5d3f88',
+        'agadez-700' : '#6f5595',
+        'agadez-600' : '#816aa3',
+        'agadez-500' : '#937fb0',
+        'agadez-400' : '#a595bd',
+        'agadez-300' : '#b7aaca',
+        'agadez-200' : '#c9bfd7',
+        'agadez-100' : '#dbd4e5',
       },
     },
   },
